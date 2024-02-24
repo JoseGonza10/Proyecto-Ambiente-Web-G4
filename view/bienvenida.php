@@ -41,7 +41,7 @@
         </div>
         <!-- Spinner End -->
         <!-- Welcome start -->
-        <form>
+        <form action="../controller/bienvenidaController.php">
         <div class="container-fluid">
             <div class="row h-100 align-items-center justify-content-center" style="min-height: 100vh;">
                 <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
@@ -52,7 +52,7 @@
                         <div class="text-center mb-0">
                                 <p>¡El juego mas popular de USA, ahora en el mejor y + grande Paintball de C.R!</p>
                         </div>
-                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4">¿Que esperas?</button>
+                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4" href="login.php">¿Que esperas?</button>
                     </div>
                 </div>
             </div>
