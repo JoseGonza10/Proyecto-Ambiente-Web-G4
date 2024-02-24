@@ -1,7 +1,7 @@
 <?php
-require_once 'conexion.php';
+require_once '../config/Conexion.php';
 
-class sexo extends conexion
+class Usuario extends Conexion
 {
     /*=================================Atributos de clase=================================*/
     protected static $conn;
@@ -10,11 +10,11 @@ class sexo extends conexion
     private $sexo=null;
     private $tipoUsuario=null;
     private $nombreUsuario=null;
-    private $primerApellidoUsuario=null;
-    private $segundoApellidoUsuario=null;
+    private $primerApellido=null;
+    private $segundoApellido=null;
     private $telefonoUsuario=null;
     private $correoUsuario=null;
-    private $fechaUsuario=null;
+    private $fechaNacimiento=null;
     private $claveUsuario=null;
 
     /*=================================Constructor=================================*/
@@ -73,44 +73,24 @@ class sexo extends conexion
         $this->nombreUsuario = $nombreUsuario;
     }
 
-    public function getNombreUsuario()
+    public function getPrimerApellido()
     {
-        return $this->nombreUsuario;
+        return $this->primerApellido;
     }
 
-    public function setNombreUsuario($nombreUsuario)
+    public function setPrimerApellido($primerApellido)
     {
-        $this->nombreUsuario = $nombreUsuario;
+        $this->primerApellido = $primerApellido;
     }
 
-    public function getPrimerApellidoUsuario()
+    public function getSegundoApellido()
     {
-        return $this->primerApellidoUsuario;
+        return $this->segundoApellido;
     }
 
-    public function setPrimerApellidoUsuario($primerApellidoUsuario)
+    public function setSegundoApellido($segundoApellido)
     {
-        $this->primerApellidoUsuario = $primerApellidoUsuario;
-    }
-
-    public function getPrimerApellidoUsuario()
-    {
-        return $this->primerApellidoUsuario;
-    }
-
-    public function setPrimerApellidoUsuario($primerApellidoUsuario)
-    {
-        $this->primerApellidoUsuario = $primerApellidoUsuario;
-    }
-
-    public function getSegundoApellidoUsuario()
-    {
-        return $this->segundoApellidoUsuario;
-    }
-
-    public function setSegundoApellidoUsuario($segundoApellidoUsuario)
-    {
-        $this->segundoApellidoUsuario = $segundoApellidoUsuario;
+        $this->segundoApellido = $segundoApellido;
     }
 
     public function getTelefonoUsuario()
@@ -133,14 +113,14 @@ class sexo extends conexion
         $this->correoUsuario = $correoUsuario;
     }
 
-    public function getFechaUsuario()
+    public function getFechaNacimiento()
     {
-        return $this->fechaUsuario;
+        return $this->fechaNacimiento;
     }
 
-    public function setFechaUsuario($fechaUsuario)
+    public function setFechaNacimiento($fechaNacimiento)
     {
-        $this->fechaUsuario = $fechaUsuario;
+        $this->fechaNacimiento = $fechaNacimiento;
     }
 
     public function getClaveUsuario()
@@ -163,27 +143,26 @@ class sexo extends conexion
         self::$conn = null;
     }
  
-    public function encontrarUsuario($usuarioCorreo,$usuarioClave){
-        $sql="SELECT FROM USUARIOS
-    WHERE CorreoUsuario= :CorreoUsuario
-    AND ClaveUsuario=:ClaveUsuario";
-    $usuario = new usuario();
+    public function verificarUsuario($usuarioCorreo,$usuarioClave){
+        $sql="SELECT * FROM usuarios WHERE CorreoUsuario=:CorreoUsuario AND ClaveUsuario=:ClaveUsuario";
+        $correo=$usuarioCorreo;
+        $clave=$usuarioClave;
+        $usuarioEncontrado = false;
     try{
     self::getConexion();
     $rs=self::$conn->prepare($sql);
-    $rs->bindParam(":CorreoUsuario",$usuarioCorreo,PDO::PARAM_STR);
-    $rs->bindParam(":ClaveUsuario",$usuarioClave,PDO::PARAM_STR);
+    $rs->bindParam(":CorreoUsuario",$correo,PDO::PARAM_STR);
+    $rs->bindParam(":ClaveUsuario",$clave,PDO::PARAM_STR);
     $rs->execute();
-    $usuarios=array();
-    foreach($rs->fetchAll() as $row){
-        if($row['CorreoUsuario'] === $usuarioCorreo && $row['ClaveUsuario'] === $usuarioClave){
-            $usuario->direccionUsuario=$row['CorreoUsuario'];
-            $usuario->claveUsuario=$row['ClaveUsuario'];
-        }
+    self::desconectar();
+    foreach($rs->fetchAll() as $reg){
+        $usuarioEncontrado = true;
     }
-    return $usuario;
+    return $usuarioEncontrado;
     }catch(PDOException $e){
-
+        self::desconectar();
+        $error = "Error ".$e->getCode( ).": ".$e->getMessage( );;
+        return json_encode($error);
     }finally{
         self::desconectar();
     }

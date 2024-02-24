@@ -1,7 +1,7 @@
 <?php
-require_once '../config/conexion.php';
+require_once '../config/Conexion.php';
 
-class sexo extends conexion
+class Sexo extends conexion
 {
     /*=================================Atributos de clase=================================*/
     protected static $conn;

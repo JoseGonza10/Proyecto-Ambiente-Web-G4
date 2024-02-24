@@ -51,13 +51,13 @@
                                 <h3 class="text-primary">UnderFire</h3>
                         </div><br>
                         
-                        <form action="../controller/loginController.php" method="GET">
+                        <form action="../controller/loginController.php" method="POST">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="entrada-correo" placeholder="Su correo electrónico" name="correo">
+                            <input type="text" class="form-control" id="floatingInput" placeholder="Su correo electrónico" name="correo">
                             <label for="floatingInput">Usuario</label>
                         </div>
                         <div class="form-floating mb-4">
-                            <input type="password" class="form-control" id="entrada-clave" placeholder="Su contraseña" name="clave">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Su contraseña" name="clave">
                             <label for="floatingPassword">Contraseña</label>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">
@@ -67,7 +67,7 @@
                             </div>
                             <a href="">¿Olvidaste tu contraseña?</a>
                         </div>
-                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4" name="enviar">Iniciar sesión</button>
+                        <button type="submit" id="form-submit" class="btn btn-primary py-3 w-100 mb-4" name="enviar">Iniciar sesión</button>
                         </form>
                         <!--<p class="text-center mb-0">Don't have an Account? <a href="">Sign Up</a></p>-->
                     </div>
