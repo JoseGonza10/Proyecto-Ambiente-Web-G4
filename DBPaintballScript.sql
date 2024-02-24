@@ -1,9 +1,9 @@
 CREATE DATABASE paintballDB;
 
-CREATE TABLE paintballDB.CANCHAS(
-IdCancha INT NOT NULL AUTO_INCREMENT,
-descripcionCancha VARCHAR(50) NOT NULL,
-CONSTRAINT PK_Cancha PRIMARY KEY(IdCancha)
+CREATE TABLE paintballDB.CAMPOS(
+IdCampo INT NOT NULL AUTO_INCREMENT,
+descripcionCampo VARCHAR(50) NOT NULL,
+CONSTRAINT PK_Campo PRIMARY KEY(IdCampo)
 );
 
 CREATE TABLE paintballDB.CATEGORIAS(
@@ -123,22 +123,21 @@ REFERENCES TIPOUSUARIOS(IdTipoUsuario)
 );
 
 CREATE TABLE paintballDB.RESERVACIONES(
-IdReservacion INT NOT NULL AUTO_INCREMENT,
-Usuario INT NOT NULL,
-Cancha INT NOT NULL,
-DiaReservacion INT NOT NULL,
-CodigoQR TEXT(7089) NOT NULL,
-FechaReservacion DATE NOT NULL,
-HoraReservacion DATETIME NOT NULL,
-TamanoGrupo INT NOT NULL,
-CONSTRAINT PK_Reservacion PRIMARY KEY(IdReservacion),
-CONSTRAINT FK_UsuarioReservacion FOREIGN KEY(Usuario)
-REFERENCES USUARIOS(IdUsuario),
-CONSTRAINT FK_CanchaReservacion FOREIGN KEY(Cancha)
-REFERENCES CANCHAS(IdCancha),
-CONSTRAINT FK_DiaReservacion FOREIGN KEY(DiaReservacion)
-REFERENCES DIAS(IdDia)
+    IdReservacion INT NOT NULL AUTO_INCREMENT,
+    Usuario INT NOT NULL,
+    Cancha INT NOT NULL, -- El cliente me indica que no es necesario tener la canche en la reservacion ya que juegan en los 3 campos que tienen disponibles
+    DiaReservacion INT NOT NULL,
+    CodigoQR TEXT(7089) NOT NULL,
+    FechaReservacion DATE NOT NULL,
+    HoraReservacion DATETIME NOT NULL,
+    TamanoGrupo INT NOT NULL,
+    Deposito DECIMAL(10, 2) NOT NULL, -- se agrega el doposito ya que a ciertos grupos se les puede pedir un deposito o por si ya quieren dejar alguna cantidad paga
+    CONSTRAINT PK_Reservacion PRIMARY KEY(IdReservacion),
+    CONSTRAINT FK_UsuarioReservacion FOREIGN KEY(Usuario) REFERENCES USUARIOS(IdUsuario),
+    CONSTRAINT FK_CanchaReservacion FOREIGN KEY(Cancha) REFERENCES CANCHAS(IdCancha),
+    CONSTRAINT FK_DiaReservacion FOREIGN KEY(DiaReservacion) REFERENCES DIAS(IdDia)
 );
+
 
 CREATE TABLE paintballDB.PAQUETES(
 IdPaquete INT NOT NULL AUTO_INCREMENT,
