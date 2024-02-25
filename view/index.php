@@ -32,7 +32,7 @@
 		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
 			<div class="container">
-				<a class="navbar-brand" href="index.html">Under Fire Paintball</a>
+				<a class="navbar-brand" href="index.php">Under Fire Paintball</a>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -41,13 +41,10 @@
 				<div class="collapse navbar-collapse" id="navbarsFurni">
 					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
 						<li class="nav-item active">
-							<a class="nav-link" href="index.html">Información</a>
+							<a class="nav-link" href="index.php">Información</a>
 						</li>
-						<li><a class="nav-link" href="shop.html">Shop</a></li>
-						<li><a class="nav-link" href="about.html">Acerca de nosotros</a></li>
-						<li><a class="nav-link" href="services.html">Servicios</a></li>
-						<li><a class="nav-link" href="blog.html">Blog</a></li>
-						<li><a class="nav-link" href="contact.html">Contáctanos</a></li>
+						<li><a class="nav-link" href="services.php">Servicios</a></li>
+						<li><a class="nav-link" href="contact.php">Contáctanos</a></li>
 					</ul>
 
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
@@ -73,7 +70,7 @@
 						</div>
 						<div class="col-lg-7">
 							<div class="hero-img-wrap">
-								<img src="assets/img/whyChoose.jpg" class="img-fluid">
+								<img src="assets/img/logo.jpg" class="img-fluid-contact">
 							</div>
 						</div>
 					</div>
@@ -82,7 +79,7 @@
 		<!-- End Hero Section -->
 
 		<!-- Start Product Section -->
-		<div class="product-section">
+		<div class="product-section" id="products">
 			<div class="container">
 				<div class="row">
 
@@ -143,7 +140,7 @@
 		<!-- End Product Section -->
 
 		<!-- Start Why Choose Us Section -->
-		<div class="why-choose-section">
+		<div class="why-choose-section" id="about">
 			<div class="container">
 				<div class="row justify-content-between">
 					<div class="col-lg-6">
@@ -374,7 +371,7 @@
 		<!-- End Testimonial Slider -->
 
 		<!-- Start Blog Section -->
-		<div class="blog-section">
+		<div class="blog-section" id="blog">
 			<div class="container">
 				<div class="row mb-5">
 					<div class="col-md-6">
@@ -473,35 +470,18 @@
 						<div class="row links-wrap">
 							<div class="col-6 col-sm-6 col-md-3">
 								<ul class="list-unstyled">
-									<li><a href="#">Acerca de nosotros</a></li>
-									<li><a href="#">Servicios</a></li>
-									<li><a href="#">Blog</a></li>
-									<li><a href="#">Contáctanos</a></li>
+									<li><a href="#about">Acerca de nosotros</a></li>
+									<li><a href="services.php">Servicios</a></li>
+									<li><a href="#blog">Blog</a></li>
+									<li><a href="contact.php">Contáctanos</a></li>
 								</ul>
 							</div>
 
 							<div class="col-6 col-sm-6 col-md-3">
 								<ul class="list-unstyled">
-									<li><a href="#">Support</a></li>
-									<li><a href="#">Knowledge base</a></li>
-									<li><a href="#">Live chat</a></li>
-								</ul>
-							</div>
-
-							<div class="col-6 col-sm-6 col-md-3">
-								<ul class="list-unstyled">
-									<li><a href="#">Jobs</a></li>
-									<li><a href="#">Our team</a></li>
-									<li><a href="#">Leadership</a></li>
-									<li><a href="#">Privacy Policy</a></li>
-								</ul>
-							</div>
-
-							<div class="col-6 col-sm-6 col-md-3">
-								<ul class="list-unstyled">
-									<li><a href="#">Paquete #1</a></li>
-									<li><a href="#">Paquete #2</a></li>
-									<li><a href="#">Paquete #3</a></li>
+									<li><a href="#products">Paquete #1</a></li>
+									<li><a href="#products">Paquete #2</a></li>
+									<li><a href="#products">Paquete #3</a></li>
 								</ul>
 							</div>
 						</div>

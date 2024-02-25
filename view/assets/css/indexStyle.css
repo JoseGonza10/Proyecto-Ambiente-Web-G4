@@ -6,6 +6,11 @@
 */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+.img-fluid-contact {
+    height: auto;
+    width: 450px;
+}
+
 .img-fluid-why {
     height: 400px;
     width: auto;
