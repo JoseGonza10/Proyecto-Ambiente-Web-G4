@@ -41,11 +41,12 @@
             <li><a class="nav-link" href="index.php">Información</a></li>
             <li><a class="nav-link" href="services.php">Servicios</a></li>
             <li class="nav-item active"><a class="nav-link" href="contact.php">Contáctanos</a></li>
+            <li><a class="nav-link" href="cart.html">Carrito <i class="fa-solid fa-cart-shopping"></i></a></li>                        
+
         </ul>
 
         <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
             <li><a class="nav-link" href="login.php"><i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
-            <li><a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
     </div>
 
@@ -67,7 +68,7 @@
 						</div>
 						<div class="col-lg-7">
 							<div class="hero-img-wrap">
-								<img src="assets/img/logo.jpg" class="img-fluid-contact">
+								<img src="assets/img/logo.jpg" class="img-fluid-contact1">
 							</div>
 						</div>
 					</div>
