@@ -41,7 +41,7 @@
             <li><a class="nav-link" href="index.php">Información</a></li>
             <li><a class="nav-link" href="services.php">Servicios</a></li>
             <li class="nav-item active"><a class="nav-link" href="contact.php">Contáctanos</a></li>
-            <li><a class="nav-link" href="cart.html">Carrito <i class="fa-solid fa-cart-shopping"></i></a></li>                        
+            <li><a class="nav-link" href="booking.php">Carrito <i class="fa-solid fa-cart-shopping"></i></a></li>                        
 
         </ul>
 

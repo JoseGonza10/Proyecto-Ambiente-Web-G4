@@ -44,7 +44,7 @@
 						</li>
 						<li><a class="nav-link" href="services.php">Servicios</a></li>
 						<li><a class="nav-link" href="contact.php">Contáctanos</a></li>
-						<li class="nav-item active"><a class="nav-link" href="cart.html">Carrito <i class="fa-solid fa-cart-shopping"></i></a></li>                        
+						<li class="nav-item active"><a class="nav-link" href="booking.php">Carrito <i class="fa-solid fa-cart-shopping"></i></a></li>                        
 					</ul>
 
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
