@@ -49,7 +49,7 @@
 
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
 						<li><a class="nav-link" href="login.php"><i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
-						<li><a class="nav-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+						<li><a class="nav-link" href="booking.php"><i class="fa-solid fa-cart-shopping"></i></a></li>
 					</ul>
 				</div>
 			</div>
@@ -65,12 +65,12 @@
 							<div class="intro-excerpt">
 								<h1>El juego mas popular de USA <span clsas="d-block"> Ahora en Costa Rica</span></h1>
 								<p class="mb-4">Somos el mejor y más grande Paintball de Costa Rica</p>
-								<p><a href="" class="btn btn-secondary me-2">Agendar</a><a href="#" class="btn btn-white-outline">Explora nuestros paquetes</a></p>
+								<p><a href="booking.php" class="btn btn-secondary me-2">Agendar</a><a href="#" class="btn btn-white-outline">Explora nuestros paquetes</a></p>
 							</div>
 						</div>
 						<div class="col-lg-7">
 							<div class="hero-img-wrap">
-								<img src="assets/img/logo.jpg" class="img-fluid-contact">
+								<img src="assets/img/logo.jpg" class="img-fluid-contact1">
 							</div>
 						</div>
 					</div>
