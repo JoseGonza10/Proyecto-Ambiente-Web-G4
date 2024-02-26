@@ -55,7 +55,8 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Panel Principal</a>
+                    <a href="dashboard.php" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Panel Principal</a>
+                    <!--
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
                         <div class="dropdown-menu bg-transparent border-0">
@@ -64,16 +65,17 @@
                             <a href="element.html" class="dropdown-item">Other Elements</a>
                         </div>
                     </div>
-                    <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Reservaciones</a>
-                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Usuarios</a>
-                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tablas</a>
-                    <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Reportes</a>
+                    -->
+                    <a href="reservaciones.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Reservaciones</a>
+                    <a href="usuarios.php" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Usuarios</a>
+                    <a href="tables.php" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tablas</a>
+                    <a href="charts.php" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Reportes</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Funciones</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="signin.html" class="dropdown-item">Inventario</a>
-                            <a href="signup.html" class="dropdown-item">Usuarios</a>
-                            <a href="404.html" class="dropdown-item">Reservaciones</a>
+                            <a href="administrarInventario.php" class="dropdown-item">Inventario</a>
+                            <a href="administrarUsuario.php" class="dropdown-item">Usuarios</a>
+                            <a href="administrarReservaciones.php" class="dropdown-item">Reservaciones</a>
                             <a href="blank.html" class="dropdown-item">Blank Page</a>
                         </div>
                     </div>

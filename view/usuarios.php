@@ -21,11 +21,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="../lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="assets/css/dashboardBootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/dashboardbootstrap.min.css" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="assets/css/dashboardStyle.css" rel="stylesheet">
@@ -36,7 +36,6 @@
         <!-- Spinner Start -->
 
         <!-- Spinner End -->
-
 
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
@@ -66,10 +65,10 @@
                         </div>
                     </div>
                     -->
-                    <a href="reservaciones.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Reservaciones</a>
-                    <a href="usuarios.php" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Usuarios</a>
+                    <a href="reservaciones.php" class="nav-item nav-link "><i class="fa fa-th me-2"></i>Reservaciones</a>
+                    <a href="usuarios.php" class="nav-item nav-link active"><i class="fa fa-keyboard me-2"></i>Usuarios</a>
                     <a href="tables.php" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tablas</a>
-                    <a href="charts.php" class="nav-item nav-link active"><i class="fa fa-chart-bar me-2"></i>Reportes</a>
+                    <a href="charts.php" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Reportes</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Funciones</a>
                         <div class="dropdown-menu bg-transparent border-0">
@@ -83,6 +82,7 @@
             </nav>
         </div>
         <!-- Sidebar End -->
+
 
         <!-- Content Start -->
         <div class="content">
@@ -154,48 +154,79 @@
             <!-- Navbar End -->
 
 
-            <!-- Chart Start -->
+            <!-- Table Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
-                    <div class="col-sm-12 col-xl-6">
+                <div class="col-12">
                         <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Single Line Chart</h6>
-                            <canvas id="line-chart"></canvas>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Multiple Line Chart</h6>
-                            <canvas id="salse-revenue"></canvas>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Single Bar Chart</h6>
-                            <canvas id="bar-chart"></canvas>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Multiple Bar Chart</h6>
-                            <canvas id="worldwide-sales"></canvas>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Pie Chart</h6>
-                            <canvas id="pie-chart"></canvas>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-secondary rounded h-100 p-4">
-                            <h6 class="mb-4">Doughnut Chart</h6>
-                            <canvas id="doughnut-chart"></canvas>
+                            <h6 class="mb-4">Usuarios</h6>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Nombre</th>
+                                            <th scope="col">Apellido</th>
+                                            <th scope="col">Email</th>
+                                            <th scope="col">Fecha Nacimiento</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>jhon@email.com</td>
+                                            <td>10/07/2001</td>
+                                            <td>Activo</td>
+                                            <td><button onclick="switch()" class="btn btn-sm btn-primary" href="">Editar</button></td>                                          
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>mark@email.com</td>
+                                            <td>21/01/1999</td>
+                                            <td>Activo</td>
+                                            <td><button onclick="switch()" class="btn btn-sm btn-primary" href="">Editar</button></td>                                          
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>jacob@email.com</td>
+                                            <td>15/12/1997</td>
+                                            <td>Activo</td>
+                                            <td><button onclick="switch()" class="btn btn-sm btn-primary" href="">Editar</button></td>                                          
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Taylor</td>
+                                            <td>Smith</td>
+                                            <td>taylor@email.com</td>
+                                            <td>15/05/1996</td>
+                                            <td>Activo</td>
+                                            <td><button onclick="switch()" class="btn btn-sm btn-primary" href="">Editar</button></td>                                          
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Pedro</td>
+                                            <td>Alcala</td>
+                                            <td>pedro@gmail.com</td>
+                                            <td>06/10/1994</td>
+                                            <td>Activo</td>
+                                            <td><button onclick="switch()" class="btn btn-sm btn-primary" href="">Editar</button></td>                                          
+                                        </tr>                                                                                
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Chart End -->
+            <!-- Table End -->
 
 
             <!-- Footer Start -->
@@ -225,13 +256,13 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/lib/chart/chart.min.js"></script>
-    <script src="assets/lib/easing/easing.min.js"></script>
-    <script src="assets/lib/waypoints/waypoints.min.js"></script>
-    <script src="assets/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="assets/lib/tempusdominus/js/moment.min.js"></script>
-    <script src="assets/lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="lib/chart/chart.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
