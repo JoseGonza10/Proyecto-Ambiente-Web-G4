@@ -203,14 +203,15 @@
                 <div class="bg-secondary text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <h6 class="mb-0">Reservaciones de hoy</h6>
-                        <a href="">Ver todas</a>
+                        <a href="reservaciones.php">Ver todas</a>
                     </div>
                     <div class="table-responsive">
                         <table class="table text-start align-middle table-bordered table-hover mb-0">
                             <thead>
                                 <tr class="text-white">
-                                    <th scope="col"><input class="form-check-input" type="checkbox"></th>
+                                    <th scope="col">#</th>
                                     <th scope="col">Dia</th>
+                                    <th scope="col">Hora</th>
                                     <th scope="col">Código de reserva</th>
                                     <th scope="col">Cliente</th>
                                     <th scope="col">Cantidad de personas</th>
@@ -219,49 +220,24 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>25 Feb 2024</td>
-                                    <td>RSV208180344</td>
-                                    <td>Sebastian Vindas</td>
-                                    <td>14</td>
-                                    <td>Pendiente</td>
+                            <tr>
+                                <th scope="row">1</th>
+                                    <td>25/02/2024</td>
+                                    <td>9:00</td>
+                                    <td>RSV110890450</td>
+                                    <td>Jhon Doe</td>
+                                    <td>8</td>
+                                    <td>Completado</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detalles</a></td>
                                 </tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>25 Feb 2024</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detalles</a></td>
-                                </tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>25 Feb 2024</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detalles</a></td>
-                                </tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>25 Feb 2024</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detalles</a></td>
-                                </tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>25 Feb 2024</td>
-                                    <td>INV-0123</td>
-                                    <td>Jhon Doe</td>
-                                    <td>$123</td>
-                                    <td>Paid</td>
+                            <tr>
+                                <th scope="row">2</th>
+                                    <td>25/02/2024</td>
+                                    <td>13:00</td>
+                                    <td>RSV110876542</td>
+                                    <td>Mark Otto</td>
+                                    <td>12</td>
+                                    <td>Completado</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detalles</a></td>
                                 </tr>
                             </tbody>

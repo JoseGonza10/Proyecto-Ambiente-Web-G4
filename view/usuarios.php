@@ -23,6 +23,8 @@
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="assets/css/dashboardbootstrap.min.css" rel="stylesheet">
@@ -181,7 +183,7 @@
                                             <td>jhon@email.com</td>
                                             <td>10/07/2001</td>
                                             <td>Activo</td>
-                                            <td><button onclick="switch()" class="btn btn-sm btn-primary" href="">Editar</button></td>                                          
+                                            <td><button onclick="switchStatus()" class="btn btn-sm btn-primary" href="">Editar</button></td>                                          
                                         </tr>
                                         <tr>
                                             <th scope="row">2</th>
@@ -190,7 +192,7 @@
                                             <td>mark@email.com</td>
                                             <td>21/01/1999</td>
                                             <td>Activo</td>
-                                            <td><button onclick="switch()" class="btn btn-sm btn-primary" href="">Editar</button></td>                                          
+                                            <td><button onclick="switchStatus()" class="btn btn-sm btn-primary" href="">Editar</button></td>                                          
                                         </tr>
                                         <tr>
                                             <th scope="row">3</th>
@@ -199,7 +201,7 @@
                                             <td>jacob@email.com</td>
                                             <td>15/12/1997</td>
                                             <td>Activo</td>
-                                            <td><button onclick="switch()" class="btn btn-sm btn-primary" href="">Editar</button></td>                                          
+                                            <td><button onclick="switchStatus()" class="btn btn-sm btn-primary" href="">Editar</button></td>                                          
                                         </tr>
                                         <tr>
                                             <th scope="row">3</th>
@@ -208,7 +210,7 @@
                                             <td>taylor@email.com</td>
                                             <td>15/05/1996</td>
                                             <td>Activo</td>
-                                            <td><button onclick="switch()" class="btn btn-sm btn-primary" href="">Editar</button></td>                                          
+                                            <td><button onclick="switchStatus()" class="btn btn-sm btn-primary" href="">Editar</button></td>                                          
                                         </tr>
                                         <tr>
                                             <th scope="row">3</th>
@@ -217,7 +219,7 @@
                                             <td>pedro@gmail.com</td>
                                             <td>06/10/1994</td>
                                             <td>Activo</td>
-                                            <td><button onclick="switch()" class="btn btn-sm btn-primary" href="">Editar</button></td>                                          
+                                            <td><button onclick="switchStatus()" class="btn btn-sm btn-primary" href="">Editar</button></td>                                          
                                         </tr>                                                                                
                                     </tbody>
                                 </table>
@@ -263,6 +265,8 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="assets/js/switchUserStatus.js"></script>
+
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>

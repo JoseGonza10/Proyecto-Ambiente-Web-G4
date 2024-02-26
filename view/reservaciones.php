@@ -165,74 +165,82 @@
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
-                                            <th scope="col">Usuario</th>
-                                            <th scope="col">Fecha Reservación</th>
+                                            <th scope="col">Dia</th>
                                             <th scope="col">Hora</th>
+                                            <th scope="col">Código de reserva</th>
+                                            <th scope="col">Cliente</th>
                                             <th scope="col">Cantidad de personas</th>
-                                            <th scope="col">Status</th>
+                                            <th scope="col">Estado</th>
                                             <th scope="col">Acciones</th>
                                         </tr>                                       
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <th scope="row">1</th>
-                                            <td>jhon@email.com</td>
                                             <td>25/02/2024</td>
                                             <td>9:00</td>
+                                            <td>RSV110890450</td>
+                                            <td>Jhon Doe</td>
                                             <td>8</td>
                                             <td>Completado</td>
                                             <td><a class="btn btn-sm btn-primary" href="">Detalles</a></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">2</th>
-                                            <td>mark@email.com</td>
                                             <td>25/02/2024</td>
                                             <td>13:00</td>
+                                            <td>RSV110876542</td>
+                                            <td>Mark Otto</td>
                                             <td>12</td>
                                             <td>Completado</td>
                                             <td><a class="btn btn-sm btn-primary" href="">Detalles</a></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">3</th>
-                                            <td>jacob@email.com</td>
                                             <td>01/03/2024</td>
                                             <td>10:00</td>
+                                            <td>RSV190759381</td>
+                                            <td>Jacob Thronton</td>
                                             <td>20</td>
                                             <td>Completado</td>
                                             <td><a class="btn btn-sm btn-primary" href="">Detalles</a></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">4</th>
-                                            <td>taylor@email.com</td>
                                             <td>10/01/2024</td>
                                             <td>10:00</td>
+                                            <td>RSV208957430</td>
+                                            <td>Taylor Smith</td>
                                             <td>20</td>
                                             <td>Completado</td>
                                             <td><a class="btn btn-sm btn-primary" href="">Detalles</a></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">5</th>
-                                            <td>taylor@email.com</td>
                                             <td>04/03/2024</td>
                                             <td>10:00</td>
+                                            <td>RSV208957430</td>
+                                            <td>Taylor Smith</td>
                                             <td>20</td>
                                             <td>Agendado</td>
                                             <td><a class="btn btn-sm btn-primary" href="">Detalles</a> <a class="btn btn-sm btn-primary" href="">Editar</a> </td>                                          
                                         </tr>
                                         <tr>
                                             <th scope="row">6</th>
-                                            <td>pedro@gmail.com</td>
                                             <td>12/12/2023</td>
                                             <td>14:00</td>
+                                            <td>RSV208189374</td>
+                                            <td>Pedro Alcala</td>
                                             <td>30</td>
                                             <td>Completado</td>
                                             <td><a class="btn btn-sm btn-primary" href="">Detalles</a></td>
                                         </tr>
                                         <tr>
                                             <th scope="row">7</th>
-                                            <td>pedro@gmail.com</td>
                                             <td>27/11/2023</td>
                                             <td>11:00</td>
+                                            <td>RSV208189374</td>
+                                            <td>Pedro Alcala</td>
                                             <td>30</td>
                                             <td>Cancelado</td>
                                             <td><a class="btn btn-sm btn-primary" href="">Detalles</a></td>
