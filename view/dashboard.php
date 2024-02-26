@@ -147,7 +147,7 @@
                         <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
                             <a href="#" class="dropdown-item">Mi perfil</a>
                             <a href="#" class="dropdown-item">Configuraciones</a>
-                            <a href="#" class="dropdown-item">Salir</a>
+                            <a href="index.php" class="dropdown-item">Salir</a>
                         </div>
                     </div>
                 </div>
