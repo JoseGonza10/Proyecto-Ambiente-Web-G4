@@ -11,7 +11,7 @@ if(isset($_POST['enviar'])){
 
     if($usuario !== NULL){
         die("Llegaste aca");
-        redirect('../index.php');
+        redirect('../dashboard.php');
     }
     
 }
