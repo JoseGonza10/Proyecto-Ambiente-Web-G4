@@ -6,12 +6,11 @@ if(isset($_POST['enviar'])){
     $usuarioCorreo = $_POST["correo"];
     $usuarioClave = $_POST["clave"];
 
-    $usuario = NULL;
+    $usuario = new Usuario();
     $usuario = $usuario->encontrarUsuario($usuarioCorreo,$usuarioClave);
 
     if($usuario !== NULL){
-        die("Llegaste aca");
-        redirect('../dashboard.php');
+        header("location: ../view/dashboard.php")
     }
     
 }

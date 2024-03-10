@@ -129,32 +129,32 @@
                 </div>
               </div>
 
-              <form>
+              <form method="POST">
                 <div class="row">
                   <div class="col-6">
                     <div class="form-group">
                       <label class="text-black" for="fname">Nombre</label>
-                      <input type="text" class="form-control" id="fname">
+                      <input name="nombreSolicitante" type="text" class="form-control" id="fname" required>
                     </div>
                   </div>
                   <div class="col-6">
                     <div class="form-group">
                       <label class="text-black" for="lname">Apellido</label>
-                      <input type="text" class="form-control" id="lname">
+                      <input name="apellidoSolicitante" type="text" class="form-control" id="lname" required>
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="text-black" for="email">Correo Electronico</label>
-                  <input type="email" class="form-control" id="email">
+                  <input name="correoSolicitante" type="email" class="form-control" id="mail" required>
                 </div>
 
                 <div class="form-group mb-5">
                   <label class="text-black" for="message">Solicitud</label>
-                  <textarea name="" class="form-control" id="message" cols="30" rows="5"></textarea>
+                  <textarea name="cuerpoSolicitud" class="form-control" id="message" cols="30" rows="5" required></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary-hover-outline">Enviar mensaje</button>
+                <button name="enviarSolicitud" type="submit" class="btn btn-primary-hover-outline" id="sendMessage" value="enviar" onClick="visitanteEnviaSolicitud()">Enviar mensaje</button>
               </form>
 
             </div>
@@ -261,7 +261,8 @@
 		</footer>
 		<!-- End Footer Section -->	
 
-
+		<script src="assets/js/mail.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<script src="js/bootstrap.bundle.min.js"></script>
 		<script src="js/tiny-slider.js"></script>
 		<script src="js/custom.js"></script>

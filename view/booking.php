@@ -142,6 +142,8 @@
 		        </div>
 		        <div class="col-md-6">
 
+				<!--Sección sin utilizar de cupon-->
+				<!-- 
 		          <div class="row mb-5">
 		            <div class="col-md-12">
 		              <h2 class="h3 mb-3 text-black">Posee algún cupón?</h2>
@@ -158,6 +160,7 @@
 		              </div>
 		            </div>
 		          </div>
+				-->
 
 		          <div class="row mb-5">
 		            <div class="col-md-12">
