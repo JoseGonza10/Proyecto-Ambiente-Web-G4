@@ -1,12 +1,12 @@
-<?phpdescripcionDia
+<?php
 require_once '../config/Conexion.php';
 
-class Dias extends conexion
+class Cancha extends conexion
 {
     /*=================================Atributos de clase=================================*/
     protected static $conn;
-    private $idDia=null;
-    private $descripcionDia=null;
+    private $idCancha=null;
+    private $descripcionCancha=null;
 
     /*=================================Constructor=================================*/
 
@@ -16,26 +16,26 @@ class Dias extends conexion
 
     
 
-    //idDia
-    public function getIdDia()
+    //idCancha
+    public function getIdCancha()
     {
-        return $this->idDia;
+        return $this->idCancha;
     }
 
-    public function setIdDia($idDia)
+    public function setIdCancha($idCancha)
     {
-        $this->idDia=$idDia;
+        $this->idCancha=$idCancha;
     }
 
-    //descripcionDia
-    public function getDescripcionDia()
+    //DescripcionCancha
+    public function getDescripcionCancha()
     {
-        return $this->descripcionDia;
+        return $this->descripcionCancha;
     }
 
-    public function setDescripcionDia($descripcionDia)
+    public function setDescripcionCancha($descripcionCancha)
     {
-        $this->descripcionDia=$descripcionDia;
+        $this->descripcionCancha=$descripcionCancha;
     }
 
 
