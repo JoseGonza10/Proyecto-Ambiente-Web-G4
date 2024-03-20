@@ -112,11 +112,11 @@
 		                <input type="number" class="form-control" id="c_address" name="c_address" placeholder="">
 		              </div>
 		            </div>
-
+					<!--
 		            <div class="form-group mt-3">
 		              <input type="text" class="form-control" placeholder="Ingresa el nombre de las personas a ingresar (opcional)">
 		            </div>
-
+					-->
 		            <div class="form-group row">
 		              <div class="col-md-6">
 		                <label for="c_state_country" class="text-black">Fecha de reservación <span class="text-danger">*</span></label>

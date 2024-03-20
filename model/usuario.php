@@ -2,39 +2,40 @@
 require_once '../config/Conexion.php';
 
 class Usuario extends Conexion
-{
-    /*=================================Atributos de clase=================================*/
+ {
+    /*===  ===  ===  ===  ===  ===  ===  ===  ===  ===  === Atributos de clase ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  === */
     protected static $conn;
-    private $idUsuario=null;
-    private $direccionUsuario=null;
-    private $sexo=null;
-    private $tipoUsuario=null;
-    private $nombreUsuario=null;
-    private $primerApellido=null;
-    private $segundoApellido=null;
-    private $telefonoUsuario=null;
-    private $correoUsuario=null;
-    private $fechaNacimiento=null;
-    private $claveUsuario=null;
+    private $idUsuario = null;
+    private $direccionUsuario = null;
+    private $sexo = null;
+    private $tipoUsuario = null;
+    private $nombreUsuario = null;
+    private $primerApellido = null;
+    private $segundoApellido = null;
+    private $telefonoUsuario = null;
+    private $correoUsuario = null;
+    private $fechaNacimiento = null;
+    private $claveUsuario = null;
 
-    /*=================================Constructor=================================*/
+    /*===  ===  ===  ===  ===  ===  ===  ===  ===  ===  === Constructor ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  === */
 
-    public function __construct(){}
+    public function __construct() {
+    }
 
-    /*=================================Encapsuladores=================================*/
-   
+    /*===  ===  ===  ===  ===  ===  ===  ===  ===  ===  === Encapsuladores ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  === */
+
     public function getIdUsuario()
     {
         return $this->idUsuario;
     }
-    
+
     public function setIdUsuario($idUsuario)
     {
         $this->idUsuario = $idUsuario;
     }
 
     public function getDireccionUsuario()
-    {
+     {
         return $this->direccionUsuario;
     }
 
@@ -133,40 +134,119 @@ class Usuario extends Conexion
         $this->claveUsuario = $claveUsuario;
     }
 
-    /*=================================Metodos=================================*/
+    /*===  ===  ===  ===  ===  ===  ===  ===  ===  ===  === Metodos ===  ===  ===  ===  ===  ===  ===  ===  ===  ===  === */
+    
     public static function getConexion()
-    {
-        self::$conn=conexion::conectar();
+ {
+        self::$conn = conexion::conectar();
     }
 
-    public static function desconectar(){
+    public static function desconectar() {
         self::$conn = null;
     }
- 
-    public function verificarUsuario($usuarioCorreo,$usuarioClave){
-        $sql="SELECT * FROM usuarios WHERE CorreoUsuario=:CorreoUsuario AND ClaveUsuario=:ClaveUsuario";
-        $correo=$usuarioCorreo;
-        $clave=$usuarioClave;
+
+    // Busqueda
+    public function verificarUsuario($usuarioCorreo, $usuarioClave) {
+        $sql = 'SELECT * FROM usuarios WHERE CorreoUsuario=:CorreoUsuario AND ClaveUsuario=:ClaveUsuario';
+        $correo = $usuarioCorreo;
+        $clave = $usuarioClave;
         $usuarioEncontrado = false;
-    try{
-    self::getConexion();
-    $rs=self::$conn->prepare($sql);
-    $rs->bindParam(":CorreoUsuario",$correo,PDO::PARAM_STR);
-    $rs->bindParam(":ClaveUsuario",$clave,PDO::PARAM_STR);
-    $rs->execute();
-    self::desconectar();
-    foreach($rs->fetchAll() as $reg){
-        $usuarioEncontrado = true;
-    }
-    return $usuarioEncontrado;
-    }catch(PDOException $e){
-        self::desconectar();
-        $error = "Error ".$e->getCode( ).": ".$e->getMessage( );;
-        return json_encode($error);
-    }finally{
-        self::desconectar();
+        try {
+            self::getConexion();
+            $rs = self::$conn->prepare( $sql );
+            $rs->bindParam( ':CorreoUsuario', $correo, PDO::PARAM_STR );
+            $rs->bindParam( ':ClaveUsuario', $clave, PDO::PARAM_STR );
+            $rs->execute();
+            self::desconectar();
+            foreach ( $rs->fetchAll() as $reg ) {
+                $usuarioEncontrado = true;
+            }
+            return $usuarioEncontrado;
+        } catch( PDOException $e ) {
+            self::desconectar();
+            $error = 'Error '.$e->getCode().': '.$e->getMessage();
+            ;
+            return json_encode( $error );
+        }
+        finally {
+            self::desconectar();
+        }
     }
 
-    }
+        // Información de usuario
+        public function traerInfoUsuario($usuarioCorreo, $usuarioClave) {
+            $sql = 'SELECT * FROM usuarios WHERE CorreoUsuario=:CorreoUsuario AND ClaveUsuario=:ClaveUsuario';
+            $correo = $usuarioCorreo;
+            $clave = $usuarioClave;
+            $arr = array();
+            try {
+                self::getConexion();
+                $rs = self::$conn->prepare($sql);
+                $rs->bindParam(':CorreoUsuario',$correo,PDO::PARAM_STR);
+                $rs->bindParam(':ClaveUsuario',$clave,PDO::PARAM_STR);
+                $rs->execute();
+                self::desconectar();
+                foreach ($rs->fetchAll() as $reg) {
+                    $arr[]=($reg['IdUsuario']);
+                    $arr[]=($reg['DireccionUsuario']);
+                    $arr[]=($reg['Sexo']);
+                    $arr[]=($reg['TipoUsuario']);
+                    $arr[]=($reg['NombreUsuario']);
+                    $arr[]=($reg['PrimerApellido']);
+                    $arr[]=($reg['SegundoApellido']);
+                    $arr[]=($reg['TelefonoUsuario']);
+                    $arr[]=($reg['CorreoUsuario']);
+                    $arr[]=($reg['FechaNacimiento']);
+                    $arr[]=($reg['ClaveUsuario']);
+                }
+                return $arr;
+            } catch(PDOException $e) {
+                self::desconectar();
+                $error = 'Error '.$e->getCode().': '.$e->getMessage();
+                return json_encode($error);
+            }
+            finally {
+                self::desconectar();
+            }
+        }
     
+    // Inserción
+    public function insertarUsuario() {
+        $query = 'INSERT INTO `usuarios`(`direccionUsuario`, `sexo`, `tipoUsuario`, `nombreUsuario`, `primerApellido`, `segundoApellido`, `telefonoUsuario`, `correoUsuario`,`fechaNacimiento`,`claveUsuario`) 
+        VALUES (:direccionUsuario,:sexo,:clave,:tipoUsuario,:nombreUsuario,:primerApellido,:segundoApellido,:telefonoUsuario,:correoUsuario,:fechaNacimiento,:claveUsuario,now())';
+        try {
+            self::getConexion();
+
+            $direccionUsuario = $this->getDireccionUsuario();
+            $sexo = $this->getSexo();
+            $tipoUsuario = $this->getTipoUsuario();
+            $nombreUsuario = $this->getNombreUsuario();
+            $primerApellido = $this->getPrimerApellido();
+            $segundoApellido = $this->getSegundoApellido();
+            $telefonoUsuario = $this->getTelefonoUsuario();
+            $correoUsuario = $this->getCorreoUsuario();
+            $fechaNacimiento = $this->getFechaNacimiento();
+            $claveUsuario = $this->getClaveUsuario();
+
+            $resultado = self::$cnx->prepare( $query );
+            $resultado->bindParam( ':direccionUsuario', $direccionUsuario, PDO::PARAM_INT );
+            $resultado->bindParam( ':sexo', $sexo, PDO::PARAM_INT );
+            $resultado->bindParam( ':tipoUsuario', $tipoUsuario, PDO::PARAM_INT );
+            $resultado->bindParam( ':nombreUsuario', $nombreUsuario, PDO::PARAM_STR );
+            $resultado->bindParam( ':primerApellido', $primerApellido, PDO::PARAM_STR );
+            $resultado->bindParam( ':segundoApellido', $segundoApellido, PDO::PARAM_STR );
+            $resultado->bindParam( ':telefonoUsuario', $telefonoUsuario, PDO::PARAM_STR );
+            $resultado->bindParam( ':correoUsuario', $correoUsuario, PDO::PARAM_STR );
+            $resultado->bindParam( ':fechaNacimiento', $fechaNacimiento, PDO::PARAM_STR );
+            $resultado->bindParam( ':claveUsuario', $claveUsuario, PDO::PARAM_STR );
+            $resultado->execute();
+            self::desconectar();
+        } catch ( PDOException $Exception ) {
+            self::desconectar();
+            $error = 'Error '.$Exception->getCode().': '.$Exception->getMessage();
+            ;
+            return json_encode( $error );
+        }
+    }
+
 }

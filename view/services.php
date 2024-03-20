@@ -182,7 +182,7 @@
 				<!-- Start Footer Section -->
                 <footer class="footer-section">
 			<div class="container relative">
-
+<!--
 				<div class="row">
 					<div class="col-lg-8">
 						<div class="subscription-form">
@@ -205,6 +205,7 @@
 						</div>
 					</div>
 				</div>
+-->
 
 				<div class="row g-5 mb-5">
 					<div class="col-lg-4">
