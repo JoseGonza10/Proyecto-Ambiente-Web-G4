@@ -51,25 +51,22 @@
                     <div class="bg-secondary rounded p-4 p-sm-5 my-4 mx-3">
                         <div class="text-center mb-0">
                                 <h3 class="text-primary">UnderFire</h3>
-                        </div><br>
-                        
-                        <form action="" id="user_login" method="POST">
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingInput" placeholder="Su correo electrónico" name="correo" required>
-                            <label for="floatingInput">Usuario</label>
                         </div>
+                        <form action="" id="user_emailVerification" method="POST">
+                        <div class="text-center mb-0">
+                                <p>Por favor introduce tu correo electrónico para poder enviarte un código de recuperación</p>
+                        </div>
+
+                        <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="floatingEmail" name="correo" aria-label="Su correo electrónico" aria-describedby="button-addon2" required>
+                        <button class="btn btn-primary" type="button" id="form-emailSubmit">Enviar código</button>
+                        </div>
+
                         <div class="form-floating mb-4">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Su contraseña" name="clave" required>
-                            <label for="floatingPassword">Contraseña</label>
+                            <input type="text" class="form-control" id="floatingCode" placeholder="Código de verificación" name="codigo" required>
+                            <label for="floatingCode">Código de verificación</label>
                         </div>
-                        <div class="d-flex align-items-center justify-content-between mb-4">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Recordarme</label>
-                            </div>
-                            <a href="recuperacion.php">¿Olvidaste tu contraseña?</a>
-                        </div>
-                        <button type="submit" id="form-submit" class="btn btn-primary py-3 w-100 mb-4" name="enviar">Iniciar sesión</button>
+                        <button type="submit" id="form-submit" class="btn btn-primary py-3 w-100 mb-4" name="validar">Validar</button>
                         </form>
                         <!--<p class="text-center mb-0">Don't have an Account? <a href="">Sign Up</a></p>-->
                     </div>
@@ -79,7 +76,7 @@
         <!-- Sign In End -->
     </div>
     <!-- Proyect scripts -->
-    <script src="assets/js/login.js"></script>
+    <script src="assets/js/mail.js"></script>
 
     <!-- JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>

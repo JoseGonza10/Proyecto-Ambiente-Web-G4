@@ -2,12 +2,12 @@
 require_once '../config/conexion.php';
 require_once '../model/usuario.php';
 
-if(isset($_POST['enviar'])){
+//if(isset($_POST['enviar'])){
     $usuarioCorreo = $_POST["correo"];
     $usuarioClave = $_POST["clave"];
-    $loginUsuario = new Usuario();
+    $operacionesUsuario = new Usuario();
     $infoUsuario = array(); //Información sobre el usuario a logear
-    $infoUsuario = $loginUsuario->traerInfoUsuario($usuarioCorreo,$usuarioClave);
+    $infoUsuario = $operacionesUsuario->traerInfoUsuario($usuarioCorreo,$usuarioClave);
 
     /* Información de posiciones de infoUsuario
     $arr[0] -> IdUsuario
@@ -23,20 +23,12 @@ if(isset($_POST['enviar'])){
     $arr[10] -> ClaveUsuario
     */
 
-    //Verifica si el usuario es estandar/empresa o admin y redirije
-    if($infoUsuario[0] !== null){
+    if($infoUsuario !== []){
         $tipo = $infoUsuario[3];
-        switch($tipo){
-            case 1:
-                header("location: ../view/dashboard.php");
-                break;
-            case 2:
-                header("location: ../view/index.php");
-                break;
-            case 3:
-                header("location: ../view/index.php");
-                break;
-        }
+        echo json_encode(array('error'=> false,'tipo'=> $tipo));
+    }
+    else{
+        echo json_encode(array('error' => true));
     }      
-}
+//}
 ?>

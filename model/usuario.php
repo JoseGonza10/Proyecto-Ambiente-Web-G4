@@ -145,17 +145,15 @@ class Usuario extends Conexion
         self::$conn = null;
     }
 
-    // Busqueda
-    public function verificarUsuario($usuarioCorreo, $usuarioClave) {
-        $sql = 'SELECT * FROM usuarios WHERE CorreoUsuario=:CorreoUsuario AND ClaveUsuario=:ClaveUsuario';
+    // Verificación
+    public function verificarUsuario($usuarioCorreo) {
+        $sql = 'SELECT * FROM usuarios WHERE CorreoUsuario=:CorreoUsuario';
         $correo = $usuarioCorreo;
-        $clave = $usuarioClave;
         $usuarioEncontrado = false;
         try {
             self::getConexion();
             $rs = self::$conn->prepare( $sql );
             $rs->bindParam( ':CorreoUsuario', $correo, PDO::PARAM_STR );
-            $rs->bindParam( ':ClaveUsuario', $clave, PDO::PARAM_STR );
             $rs->execute();
             self::desconectar();
             foreach ( $rs->fetchAll() as $reg ) {
@@ -165,7 +163,6 @@ class Usuario extends Conexion
         } catch( PDOException $e ) {
             self::desconectar();
             $error = 'Error '.$e->getCode().': '.$e->getMessage();
-            ;
             return json_encode( $error );
         }
         finally {
