@@ -52,19 +52,19 @@
                         <div class="text-center mb-0">
                                 <h3 class="text-primary">UnderFire</h3>
                         </div>
-                        <form action="" id="user_emailVerification" method="POST">
+                        <form action="" id="user_passwordConfirmation" method="POST">
                         <div class="text-center mb-0">
-                                <p>Por favor introduce tu correo electrónico para poder enviarte un código de recuperación</p>
-                        </div>
-
-                        <div class="input-group mb-3">
-                        <input type="text" class="form-control" id="floatingEmail" name="correo" aria-label="Su correo electrónico" aria-describedby="button-addon2" required>
-                        <button class="btn btn-primary" type="button" id="form-emailSubmit">Enviar código</button>
+                                <p>Por favor introduce tu nueva contraseña a usar en la cuenta. Al hacerlo, confirma la clave para proceder</p>
                         </div>
 
                         <div class="form-floating mb-4">
-                            <input type="text" class="form-control" id="floatingCode" placeholder="Código de verificación" name="codigo" required>
-                            <label for="floatingCode">Código de verificación</label>
+                            <input type="text" class="form-control" id="floatingPassCode" placeholder="Nueva contraseña" name="clave" required>
+                            <label for="floatingCode">Nueva contraseña</label>
+                        </div>
+
+                        <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="floatingConfirmation" placeholder="Confirmar contraseña" name="confirmacion" required>
+                            <label for="floatingCode">Confirmar contraseña</label>
                         </div>
                         <button type="submit" id="form-submit" class="btn btn-primary py-3 w-100 mb-4" name="validar">Validar</button>
                         </form>
