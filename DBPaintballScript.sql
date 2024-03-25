@@ -140,6 +140,24 @@ CONSTRAINT FK_DiaReservacion FOREIGN KEY(DiaReservacion)
 REFERENCES DIAS(IdDia)
 );
 
+/*
+CREATE TABLE paintballDB.RESERVACIONES(
+IdReservacion INT NOT NULL AUTO_INCREMENT, el id tambien debe de incrementar
+Usuario INT NOT NULL, esto si, se junta con el id del usuario
+Cancha INT NOT NULL, que se agregue de manera aleatoria el numero de cancha.
+CodigoQR TEXT(7089) NOT NULL,
+FechaReservacion DATE NOT NULL, 
+HoraReservacion DATETIME NOT NULL,
+TamanoGrupo INT NOT NULL,
+Estado BOOL NOT NULL,
+CONSTRAINT PK_Reservacion PRIMARY KEY(IdReservacion),
+CONSTRAINT FK_UsuarioReservacion FOREIGN KEY(Usuario)
+REFERENCES USUARIOS(IdUsuario),
+CONSTRAINT FK_CanchaReservacion FOREIGN KEY(Cancha)
+REFERENCES CANCHAS(IdCancha)
+);
+*/
+
 CREATE TABLE paintballDB.PAQUETES(
 IdPaquete INT NOT NULL AUTO_INCREMENT,
 Estado INT NOT NULL,

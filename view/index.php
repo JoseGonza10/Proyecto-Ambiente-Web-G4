@@ -49,7 +49,7 @@
 					</ul>
 
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-						<li><a class="nav-link" href="login.php"><i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
+						<li><a class="nav-link" href="dashboard.php"><i class="fa-solid fa-arrow-right-to-bracket"></i></a></li>
 					</ul>
 				</div>
 			</div>

@@ -223,7 +223,7 @@
                                             <td>Taylor Smith</td>
                                             <td>20</td>
                                             <td>Agendado</td>
-                                            <td><a class="btn btn-sm btn-primary" href="">Detalles</a> <a class="btn btn-sm btn-primary" href="">Editar</a> </td>                                          
+                                            <td><a class="btn btn-sm btn-primary" href="">Detalles</a> <a class="btn btn-sm btn-primary" href="reservacionesEdit.php">Editar</a> </td>                                          
                                         </tr>
                                         <tr>
                                             <th scope="row">6</th>
